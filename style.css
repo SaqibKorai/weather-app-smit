@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background: #fff;
+  color: #000;
+}
+
+.app-container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light .app-container {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn {
+  background: #333;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light .btn {
+  background: #fff;
+  color: #333;
+}
+
+body.light .btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.city-input {
+  width: 80%;
+  padding: 15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+body.light .city-input {
+  background: #f4f4f4;
+  color: #333;
+  border-color: #333;
+}
+
+.city-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 10px #333;
+}
+
+#error-message {
+  color: #ff5c5c;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.weather-icon {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.temp {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.city {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.details p {
+  font-size: 16px;
+  color: #ddd;
+  font-weight: 600;
+}
+
+body.light .details p {
+  color: #333;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#themeToggleBtn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+body.light #themeToggleBtn {
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .city-input {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+}
